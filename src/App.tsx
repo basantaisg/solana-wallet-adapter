@@ -12,6 +12,8 @@ import {
 } from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
 
+import { Airdrop } from "./components/Airdrop";
+
 // Default styles that can be overridden by your app
 import "@solana/wallet-adapter-react-ui/styles.css";
 const App = () => {
@@ -19,9 +21,13 @@ const App = () => {
     <ConnectionProvider endpoint={"https://api.devnet.solana.com"}>
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
+          <br />
           <WalletMultiButton />
+          <br />
+          <br />
           <WalletDisconnectButton />
-          {/* Your app's components go here, nested within the context providers. */}
+          <br />
+          <Airdrop />
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
